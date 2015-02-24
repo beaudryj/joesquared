@@ -38,9 +38,11 @@ $('.navbar-collapse ul li a').click(function() {
 
 // Used for direct linking to an episode
 $(document).ready(function() {
-	if(window.location.hash) {
-	  if($(window.location.hash).length !== 0) {
-		$(window.location.hash).modal('show');
-	  }
+	var hash = window.location.hash;
+	if(hash) {
+		hash = hash.toLowerCase();
+		if($(hash).length !== 0) {
+			$(hash).modal('show');
+		}
 	}
 });
