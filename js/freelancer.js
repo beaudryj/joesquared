@@ -35,3 +35,12 @@ $('body').scrollspy({
 $('.navbar-collapse ul li a').click(function() {
     $('.navbar-toggle:visible').click();
 });
+
+// Used for direct linking to an episode
+$(document).ready(function() {
+	if(window.location.hash) {
+	  if($(window.location.hash).length !== 0) {
+		$(window.location.hash).modal('show');
+	  }
+	}
+});
